@@ -1,0 +1,96 @@
+.button {
+  cursor: pointer;
+  font: inherit;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border: none;
+  background-color: rgb(17, 46, 70);
+  color: white;
+  padding: 0.75rem 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 25px;
+  font-weight: bold;
+  width: 30rem;
+}
+
+.button:hover,
+.button:active {
+  background-color: steelblue;
+}
+
+.badge {
+  background-color: rgb(39, 88, 128);
+  padding: 0.25rem 1rem;
+  border-radius: 25px;
+  margin-left: 1rem;
+  font-weight: bold;
+  min-width: 5rem;
+  margin-top: 0.3rem;
+}
+
+.button:hover .badge,
+.button:active .badge {
+  background-color: rgb(39, 88, 128);
+}
+
+.bump {
+  animation: bump 300ms ease-out;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 915px) {
+  .button {
+    max-height: 8rem;
+    margin-top: 1rem;
+    margin: auto;
+    min-width: 8rem;
+    margin-left: 0.5rem;
+    margin-right: 0;
+    padding: auto 0.4rem;
+  }
+
+  .badge {
+    min-width: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .button {
+    max-height: 10rem;
+    margin-top: 0.6rem;
+    min-width: 4rem;
+    margin-left: 0.5rem;
+    margin-right: 0;
+    padding: auto 0;
+    font-size: 15px;
+  }
+  .badge {
+    min-width: 1.5rem;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 390px) {
+  .button {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,95 @@
+.container {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 20px;
+  background-color: transparent;
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid rgb(222, 225, 227);
+}
+
+.Timers {
+  display: inline-block;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  border-radius: 20px;
+  background-color: transparent;
+  width: 45rem;
+  min-width: 10rem;
+  overflow: hidden;
+  text-align: center;
+  height: 8.5rem;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 20px;
+  background-color: rgb(161, 242, 161);
+  padding: 0;
+  transition: 0.3s ease-out;
+}
+
+.Timers h2 {
+  margin: 0;
+}
+#display {
+  margin: 0;
+}
+#display span {
+  font-size: 36px;
+}
+#buttons button:nth-child(2) {
+  margin-left: 8px;
+}
+
+#buttons .stop {
+  background-color: transparent;
+  color: steelblue;
+  border-radius: 50%;
+  border: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+#buttons .stop:hover {
+  color: rgb(120, 182, 234);
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+#buttons .btns {
+  min-width: 4rem;
+  padding: 0;
+  margin-top: 0.4rem;
+  background-color: transparent;
+  color: steelblue;
+  font-size: 15px;
+  border-radius: 12px;
+  border: none;
+  border: 1px solid steelblue;
+}
+
+#buttons .btns:hover {
+  color: rgb(127, 187, 236);
+}
+
+button:focus {
+  outline: 0;
+}
+
+@media (max-width: 1500px) {
+  .Timers {
+    max-width: 25rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .Timers {
+    max-width: 180px;
+  }
+}

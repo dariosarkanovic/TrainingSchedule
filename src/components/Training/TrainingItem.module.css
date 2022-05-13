@@ -1,0 +1,175 @@
+.exercise-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 95%;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid steelblue;
+  margin: 0 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.summary {
+  width: 8rem;
+  max-width: 8rem;
+  margin-bottom: 1rem;
+}
+
+.summary h2 {
+  font-size: 28px;
+}
+
+.summary .description {
+  font-style: italic;
+  font-size: 17px;
+}
+
+.player {
+  display: inline-block;
+  margin-bottom: 1rem;
+  margin: 0 1rem;
+}
+
+.player button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: steelblue;
+  border: 2px solid steelblue;
+  background-color: transparent;
+  border-radius: 12px;
+  padding: 0.7rem 0;
+  width: 3rem;
+  height: 3rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.actions .duration {
+  letter-spacing: 0.1rem;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.actions .repetitions {
+  padding: 0.3rem 0.4rem;
+  min-width: 6.7rem;
+  text-align: center;
+  border: 1px solid steelblue;
+  background-color: steelblue;
+  color: white;
+  border-radius: 6px;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.total-exercise-duration {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.action-btns button {
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: rgb(17, 46, 70);
+  border: 1px solid steelblue;
+  width: 3rem;
+  text-align: center;
+  padding-bottom: 0.4rem;
+  border-radius: 6px;
+  background-color: transparent;
+  margin-left: 1rem;
+  margin: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.action-btns button:hover,
+.player button:hover {
+  background-color: steelblue;
+  color: white;
+}
+
+.action-btns button:active,
+.player button:active,
+.clear button:active {
+  transform: scale(0.9);
+}
+
+.clear {
+  text-align: center;
+  margin-top: 0.5rem;
+  padding: 0;
+}
+
+.clear button {
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 5rem;
+  padding: 0;
+  font-size: 15px;
+  letter-spacing: 2px;
+  background-color: rgb(247, 104, 104);
+  color: white;
+  border: 1px solid rgb(247, 104, 104);
+  border-radius: 12px;
+}
+
+.clear button:hover {
+  background-color: rgb(255, 159, 159);
+  color: white;
+}
+.bump {
+  animation: bump 300ms ease-out;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 554px) {
+  .exercise-item {
+    justify-content: center;
+  }
+  .summary {
+    margin: 0 1rem;
+    min-width: 180px;
+    text-align: center;
+  }
+
+  .actions {
+    margin: 0 1rem;
+    width: 180px;
+    text-align: center;
+  }
+
+  .clear {
+    margin-left: 0;
+  }
+}

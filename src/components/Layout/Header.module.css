@@ -1,0 +1,71 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 5rem;
+  background-color: rgb(39, 88, 128);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  animation: header-appear 0.5s ease-in;
+}
+
+.main-image {
+  height: 25rem;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.main-image img {
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotateZ(-3deg) translateY(-3rem) translateX(-1rem);
+  animation: img-appear 0.5s ease-in;
+}
+
+@keyframes img-appear {
+  from {
+    opacity: 0;
+    transform: translateX(-100rem);
+  }
+  to {
+    opacity: 1;
+    transform: rotateZ(-3deg) translateY(-3rem) translateX(-1rem);
+  }
+}
+
+@keyframes header-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 915px) {
+  .header {
+    height: 6rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    width: 90%;
+    height: 5.6rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .header {
+    height: 8rem;
+  }
+}
